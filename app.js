@@ -21,7 +21,7 @@ footer.style = "display: none"
 
 function getWeather(city) {
     //constructing url for request
-    const urlGeo = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=93be09e2a8029784917a7f15809b83f0`
+    const urlGeo = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=93be09e2a8029784917a7f15809b83f0`
     console.log(urlGeo)
 
     // geocoder api call
