@@ -1,8 +1,13 @@
+
+//preloader function
 window.addEventListener("load", () => {
     const loader = document.querySelector('.loader')
+    const body = document.querySelector('body')
     setTimeout(
         ()=>{
-          loader.style.display = 'none' ;
+            //loader will fade out after the func is executed
+          loader.style.display = 'none' 
+          body.style.overflow = 'scroll'
         },
         3000
     );
