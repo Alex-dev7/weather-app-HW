@@ -42,19 +42,10 @@ function getWeather(city) {
       
 
 
-        //second api call
+        //weather api call
         $.ajax(urlWeather)
         .then((weather) => {
             console.log(weather)
-
-            // function that converts the seconds to h
-            function sunTimeConverter(seconds) {
-                const sec = seconds
-                const date = new Date(sec * 1000)
-                const timeStr = date.toLocaleTimeString() 
-                return timeStr
-        }
-
 
             //icon url
             const iconUrl = ` http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`
@@ -62,16 +53,7 @@ function getWeather(city) {
             const timezone = weather.timezone
             const rise = weather.sys.sunrise 
             const set = weather.sys.sunset
-            
-           
-           
- 
 
-
-
-       
-
-            
                 $(".city").html(`${weather.name}, ${weather.sys.country}`)
                 $(".temp").html(`${Math.floor(weather.main.temp)} &#8457`)
                 $(".icon").html(`<img src="${iconUrl}">`)
@@ -91,12 +73,13 @@ function getWeather(city) {
 }
 
 
-
+//click event on submit button
 $("input[type=submit]").on("click", (event) => {
 
     //prevent refresh
     event.preventDefault()
 
+    // show the footer
     footer.style = "display"
    //grab the text from the input
    const inputText = $("input[type=text]").val()
@@ -104,7 +87,7 @@ $("input[type=submit]").on("click", (event) => {
    // update the screen
    getWeather(inputText)
 
-   //clear space after click
+   //clear input space after submiting the form
    $("#myInput").val('')
  
  

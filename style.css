@@ -10,7 +10,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: linear-gradient( 135deg, #65FDF0 10%, #1D6FA3 100%);
+    background: linear-gradient( 135deg, #65FDF0 10%, rgb(113, 73, 243) 100%);
     overflow: scroll;
     max-height: 100%;
     overflow: hidden;
@@ -27,7 +27,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(41, 172, 228) ;
+    background-color: rgb(113, 73, 243);
+    /* background-color: rgb(17, 147, 203) ; */
     animation: myAnim 2s ease 2s 1 normal forwards;
    
 }
