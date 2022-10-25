@@ -16,7 +16,7 @@ window.addEventListener("load", () => {
 })
 
 // saving my api-key in variable
-const apiKey = "93be09e2a8029784917a7f15809b83f0"
+const apiKey = "09097"
 
 
 //main html tag
